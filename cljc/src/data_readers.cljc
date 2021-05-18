@@ -1,0 +1,1 @@
+{foo/bar #?(:clj my.project.foo/bar :cljs my.project.foo/baz)}

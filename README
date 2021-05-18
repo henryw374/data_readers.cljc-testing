@@ -1,0 +1,13 @@
+
+Showing different behaviour between data_readers.clj and data_readers.cljc
+
+cd clj 
+
+clj -e "(require 'my.project.foo) (println #foo/bar \"world\")"
+
+prints 'hello! world'
+
+cd ../cljc
+
+clj -e "(require 'my.project.foo) (println #foo/bar \"world\")"
+

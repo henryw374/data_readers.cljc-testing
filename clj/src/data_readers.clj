@@ -1,0 +1,1 @@
+{foo/bar my.project.foo/bar}
