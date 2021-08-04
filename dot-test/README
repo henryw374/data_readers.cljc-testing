@@ -1,0 +1,23 @@
+
+Demo of Clojurescript compilation problem with dot access such as js/foo.bar
+
+the issue is tracked here: https://clojure.atlassian.net/browse/CLJS-3315 
+
+# Usage
+
+start a repl 
+
+```clojure 
+
+(require 'compile)
+(compile/build)
+```
+
+that creates prod-target/main.js, which is just the compiled result of dot.dot-test 
+
+eyeballing that file, you can see that instead of '"bar?" foo.bar', you see some mangled thing,
+whereas `console.log("car? ",a.car,a.car)` comes out correctly.
+
+There is also a `:shadow` alias. Starting a repl with that, `(require 'shadow-compile)`,
+and execute (restart) and `(prod-build)` in that. That creates shadow/public/compiled/js/main.js
+which has the same problem as the non-shadow build

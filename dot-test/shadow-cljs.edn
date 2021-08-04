@@ -1,0 +1,15 @@
+{
+ :deps     true
+ :npm-deps {:install false}
+ :dev-http {8082 "public"}
+ :target-defaults
+           {:browser
+            {:compiler-options {:warnings {:fn-deprecated false}}}}
+ :builds   {
+            :app      {:target     :browser
+                       :output-dir "shadow/public/compiled/js"
+                       :asset-path "/compiled/js"
+                       :modules    {:main {:entries [dot.dot-test]}}}
+
+            }
+ }
