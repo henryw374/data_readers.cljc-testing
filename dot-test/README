@@ -1,5 +1,5 @@
 
-Demo of Clojurescript compilation problem with dot access such as js/foo.bar
+Demo of Clojurescript compilation problem with dot access such as foo.bar
 
 the issue is tracked here: https://clojure.atlassian.net/browse/CLJS-3315 
 
